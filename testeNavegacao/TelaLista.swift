@@ -4,7 +4,7 @@
 //
 //  Created by Roberto Edgar Geiss on 07/02/24.
 //
-
+ 
 import SwiftUI
 
 struct TelaLista: View
@@ -18,10 +18,11 @@ struct TelaLista: View
             Text("Tela de lista")
         }
         .toolbar { ToolbarItem(placement: .confirmationAction)
-            { Button {
+        { Button
+            {
                 didTapAdd()
             }
-                label: { Image(systemName: "plus")}}
+            label: { Image(systemName: "plus")}}
         }
         .navigationDestination(isPresented: $isReadPresented)
         {
@@ -32,11 +33,5 @@ struct TelaLista: View
     func didTapAdd()
     {
         isReadPresented = true
-    }
-}
-
-struct TelaLista_Previews: PreviewProvider {
-    static var previews: some View {
-        TelaLista()
     }
 }

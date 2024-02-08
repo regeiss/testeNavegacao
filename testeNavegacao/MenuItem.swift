@@ -24,3 +24,4 @@ enum Menu: String
     case gooey
     case actionbutton
 }
+  

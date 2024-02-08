@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+ 
 @available(macOS 13.0, *)
 @main
 struct testeNavegacaoApp: App
