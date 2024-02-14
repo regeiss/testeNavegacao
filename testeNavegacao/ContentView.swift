@@ -10,16 +10,12 @@ import SwiftUI
 @available(macOS 13.0, *)
 struct ContentView: View
 {
-    @State var path = NavigationPath(["1", "2"])
-    
     var navigationItems = [
-        NavigationItem(title: "Compass App", icon: "safari", menu: .compass),
-        NavigationItem(title: "3D Card", icon: "lanyardcard", menu: .card),
-        NavigationItem(title: "Radial Layout", icon: "clock", menu: .radial),
-        NavigationItem(title: "Gooey Action Button", icon: "plus.circle", menu: .actionbutton),
-        NavigationItem(title: "Gooey Menu", icon: "drop", menu: .gooey),
-        NavigationItem(title: "Charts", icon: "chart.xyaxis.line", menu: .charts),
-        NavigationItem(title: "Half Sheet", icon: "rectangle.portrait.bottomhalf.filled", menu: .halfsheet),
+        NavigationItem(title: "Compass App", icon: "safari", menu: .banco),
+        NavigationItem(title: "3D Card", icon: "lanyardcard", menu: .conta),
+        NavigationItem(title: "Radial Layout", icon: "clock", menu: .cartao),
+        NavigationItem(title: "Gooey Action Button", icon: "plus.circle", menu: .receita),
+        NavigationItem(title: "Gooey Menu", icon: "drop", menu: .despesa)
     ]
     
     var body: some View
@@ -36,22 +32,21 @@ struct ContentView: View
             .listStyle(.plain)
             .navigationTitle("SwiftUI apps")
             .navigationBarTitleDisplayMode(.inline)
+//            .navigationDestination(for: Destination.self) { destination in
+//                            ViewFactory.viewForDestination(destination)
+//                        }
             .navigationDestination(for: NavigationItem.self)
             { item in
                 switch item.menu {
-                case .compass:
+                case .banco:
+                    ViewFactory.viewForDestination(item.menu)
+                case .conta:
                     TelaLista()
-                case .card:
+                case .cartao:
                     TelaLista()
-                case .charts:
+                case .receita:
                     TelaLista()
-                case .radial:
-                    TelaLista()
-                case .halfsheet:
-                    TelaLista()
-                case .gooey:
-                    TelaLista()
-                case .actionbutton:
+                case .despesa:
                     TelaLista()
                 }
             }

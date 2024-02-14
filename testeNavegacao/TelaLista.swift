@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TelaLista: View
 {
-    @State var isReadPresented = false
+    @EnvironmentObject var coordinator: Coordinator
     
     var body: some View
     {
@@ -24,14 +24,10 @@ struct TelaLista: View
             }
             label: { Image(systemName: "plus")}}
         }
-        .navigationDestination(isPresented: $isReadPresented)
-        {
-            TelaAdd()
-        }
     }
     
     func didTapAdd()
     {
-        isReadPresented = true
+        coordinator.tapOnAdd()
     }
 }

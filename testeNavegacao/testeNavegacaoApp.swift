@@ -6,19 +6,24 @@
 //
 
 import SwiftUI
- 
+
 @available(macOS 13.0, *)
 @main
 struct testeNavegacaoApp: App
 {
-    // @State var router = Router()
+    @ObservedObject var coordinator = Coordinator()
     
     var body: some Scene
     {
         WindowGroup
         {
-            ContentView()
-               // .environmentObject(router)
+            NavigationStack(path: $coordinator.path) {
+                ContentView()
+                    .navigationDestination(for: DestinoCadastro.self) { destination in
+                        ViewFactory.viewForDestination(destination)
+                    }
+                    .environmentObject(coordinator)
+            }
         }
     }
 }

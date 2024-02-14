@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E166FD142B7A738000F2AE76 /* DestinoCadastro.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166FD132B7A738000F2AE76 /* DestinoCadastro.swift */; };
+		E166FD162B7A7BB200F2AE76 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166FD152B7A7BB200F2AE76 /* Coordinator.swift */; };
+		E166FD182B7A914500F2AE76 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E166FD172B7A914500F2AE76 /* ViewFactory.swift */; };
 		E179F3BD2B595BD300559C26 /* testeNavegacaoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179F3BC2B595BD300559C26 /* testeNavegacaoApp.swift */; };
 		E179F3BF2B595BD300559C26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E179F3BE2B595BD300559C26 /* ContentView.swift */; };
 		E179F3C12B595BD800559C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E179F3C02B595BD800559C26 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E166FD132B7A738000F2AE76 /* DestinoCadastro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinoCadastro.swift; sourceTree = "<group>"; };
+		E166FD152B7A7BB200F2AE76 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E166FD172B7A914500F2AE76 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		E179F3B92B595BD300559C26 /* testeNavegacao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testeNavegacao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E179F3BC2B595BD300559C26 /* testeNavegacaoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testeNavegacaoApp.swift; sourceTree = "<group>"; };
 		E179F3BE2B595BD300559C26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +118,9 @@
 				E179F3C22B595BD800559C26 /* testeNavegacao.entitlements */,
 				E179F3C32B595BD800559C26 /* Preview Content */,
 				E1DAB5C72B7507F4006E4999 /* MenuItem.swift */,
+				E166FD132B7A738000F2AE76 /* DestinoCadastro.swift */,
+				E166FD152B7A7BB200F2AE76 /* Coordinator.swift */,
+				E166FD172B7A914500F2AE76 /* ViewFactory.swift */,
 			);
 			path = testeNavegacao;
 			sourceTree = "<group>";
@@ -205,7 +214,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					E179F3B82B595BD300559C26 = {
 						CreatedOnToolsVersion = 14.2;
@@ -271,12 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E166FD162B7A7BB200F2AE76 /* Coordinator.swift in Sources */,
 				E179F3BF2B595BD300559C26 /* ContentView.swift in Sources */,
 				E1C3C42B2B74066B00B284FB /* TelaLista.swift in Sources */,
 				E1ECFAF92B62E43F00942EB9 /* Router.swift in Sources */,
+				E166FD182B7A914500F2AE76 /* ViewFactory.swift in Sources */,
 				E179F3BD2B595BD300559C26 /* testeNavegacaoApp.swift in Sources */,
 				E1DAB5C82B7507F4006E4999 /* MenuItem.swift in Sources */,
 				E1DAB5CA2B753370006E4999 /* TelaAdd.swift in Sources */,
+				E166FD142B7A738000F2AE76 /* DestinoCadastro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +329,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -346,9 +359,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -375,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -404,9 +420,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -430,6 +448,7 @@
 				CODE_SIGN_ENTITLEMENTS = testeNavegacao/testeNavegacao.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"testeNavegacao/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -466,6 +485,7 @@
 				CODE_SIGN_ENTITLEMENTS = testeNavegacao/testeNavegacao.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"testeNavegacao/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -501,6 +521,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
@@ -523,6 +544,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
@@ -544,6 +566,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
@@ -565,6 +588,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
